@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Final Result Prediction Form</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/styling.css') }}" type="text/css" />
+</head>
+
+<body>
+    <div class="testbox">
+        <form action="/predict" method="POST" target="_blank">
+            <div class="banner">
+                <h1>Persistence Prediction Form</h1>
+            </div>
+            <h2 style="text-align: center;"> Fill out the following form to predict whether or not our model predicts
+                you will take a prescribed drug for its full course. </h2>
+
+            <div class="item">
+                <label for="Gender">Gender</label>
+                <select id="Gender" name="Gender"> Select Gender
+                    <option disabled selected value> -- select an option -- </option>
+                    <option value="Male">Male</option>
+                    <option value="Female">Female</option>
+
+                </select>
+            </div>
+
+            <div class="item">
+                <label for="Race">Race</label>
+                <select id="Race" name="Race"> Select Race
+                    <option disabled selected value> -- select an option -- </option>
+                    <option value="Caucasian">Caucasian</option>
+                    <option value="Asian">Asian</option>
+                    <option value="Other/Unkown">Other</option>
+                    <option value="African American">African American</option>
+                </select>
+            </div>
+
+
+            <div class="item">
+                <label for="Ethnicity">Ethnicity</label>
+                <select id="Ethnicity" name="Ethnicity">
+                    <option disabled selected value> -- select an option -- </option>
+                    <option value="Not Hispanic">Not Hispanic</option>
+                    <option value="Hispanic">Hispanic</option>
+                    <option value="Unknown">Other</option>
+                </select>
+            </div>
+
+            <div class="item">
+                <label for="Region">Region</label>
+                <select id="Region" name="Region"> Select your Region
+                    <option disabled selected value> -- select an option -- </option>
+                    <option value="West">West</option>
+                    <option value="Midwest">Midwest</option>
+                    <option value="South">South</option>
+                    <option value="Other/Unknown">Other</option>
+                    <option value="Northeast">Northeast</option>
+
+                </select>
+            </div>
+
+
+
+            <div class="item">
+                <label for="Age_Bucket">Age Group</label>
+                <select id="Age_Bucket" name="Age_Bucket">
+                    <option disabled selected value> -- select an option -- </option>
+                    <option value=">75">75</option>
+                    <option value="55-65">55-65</option>
+                    <option value="65-75">65-75</option>
+                    <!--<option value="<55">Younger than 55</option>-->
+                </select>
+            </div>
+
+
+
+            <div class="btn-block">
+                <button type="submit" href="/">SUBMIT</button>
+            </div>
+        </form>
+    </div>
+</body>
+
+</html>
